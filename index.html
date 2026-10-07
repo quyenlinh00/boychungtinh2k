@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website 48 Giờ — Tiệm của bạn lên Google, khách đặt lịch ngay</title>
+  <meta name="description" content="Làm website cho tiệm tóc, spa, quán cà phê, phòng tập trong 48 giờ. Xem bản dựng thử trước, ưng mới cọc. Chạy mượt trên điện thoại, có đặt lịch và Google Maps." />
+  <meta property="og:title" content="Website 48 Giờ — Tiệm của bạn lên Google" />
+  <meta property="og:description" content="Xem bản dựng thử trước, ưng mới cọc. Giao trong 48 giờ." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#070a1a" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Cpath d='M9 22V10h5.2c2.6 0 4.2 1.4 4.2 3.6 0 1.5-.8 2.6-2.1 3.1L19.5 22h-2.9l-2.7-4.8H11.6V22H9zm2.6-7h2.4c1.1 0 1.8-.5 1.8-1.4s-.7-1.4-1.8-1.4h-2.4V15z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070a1a;
+      --bg-2: #0d1230;
+      --text: #eef0ff;
+      --text-dim: rgba(238, 240, 255, 0.66);
+      --text-faint: rgba(238, 240, 255, 0.42);
+      --line: rgba(255, 255, 255, 0.09);
+      --glass: rgba(255, 255, 255, 0.045);
+      --glass-strong: rgba(255, 255, 255, 0.075);
+      --indigo: #6366f1;
+      --purple: #a855f7;
+      --blue: #3b82f6;
+      --grad: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #a855f7 100%);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+    section { padding: 96px 0; position: relative; }
+
+    /* ── Backdrop ── */
+    .backdrop { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.38; animation: drift 14s ease-in-out infinite alternate; }
+    .orb.a { width: 520px; height: 520px; background: var(--indigo); top: -140px; left: -120px; }
+    .orb.b { width: 440px; height: 440px; background: var(--purple); top: 30%; right: -160px; animation-delay: -5s; }
+    .orb.c { width: 380px; height: 380px; background: var(--blue); bottom: -120px; left: 25%; animation-delay: -9s; }
+    @keyframes drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(40px, 28px) scale(1.07); } }
+
+    /* ── Nav ── */
+    nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); background: rgba(7, 10, 26, 0.72); background: color-mix(in srgb, var(--bg) 72%, transparent); border-bottom: 1px solid var(--line); }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .brand { font-weight: 800; letter-spacing: -0.02em; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+    .brand i { width: 28px; height: 28px; border-radius: 8px; background: var(--grad); display: inline-block; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 0.92rem; color: var(--text-dim); }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 28px; border-radius: 999px; font-weight: 700; font-size: 0.98rem; border: 0; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; font-family: inherit; }
+    .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 10px 34px rgba(99, 102, 241, 0.42); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(99, 102, 241, 0.56); }
+    .btn-ghost { background: var(--glass); border: 1px solid var(--line); color: var(--text); }
+    .btn-ghost:hover { background: var(--glass-strong); transform: translateY(-2px); }
+    .btn-sm { padding: 10px 20px; font-size: 0.88rem; }
+    .btn:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; }
+
+    /* ── Hero ── */
+    .hero { padding: 88px 0 72px; text-align: center; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line); font-size: 0.82rem; color: var(--text-dim); backdrop-filter: blur(10px); }
+    .badge b { width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.18); }
+    h1 { font-size: clamp(2.2rem, 6vw, 4.1rem); line-height: 1.1; letter-spacing: -0.035em; font-weight: 800; margin: 26px auto 22px; max-width: 880px; }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.15; letter-spacing: -0.03em; font-weight: 800; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { font-size: clamp(1rem, 2vw, 1.18rem); color: var(--text-dim); max-width: 640px; margin: 0 auto 36px; }
+    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .proof { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+    .chip { padding: 10px 18px; border-radius: 14px; background: var(--glass); border: 1px solid var(--line); font-size: 0.86rem; color: var(--text-dim); backdrop-filter: blur(10px); }
+    .chip strong { color: var(--text); font-weight: 700; }
+
+    /* ── Mockups ── */
+    .mocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 64px; text-align: left; }
+    .mock { background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; backdrop-filter: blur(14px); transition: transform .3s; }
+    .mock:hover { transform: translateY(-6px); }
+    .mock:nth-child(2) { animation: float 7s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .dots { display: flex; gap: 6px; margin-bottom: 12px; }
+    .dots span { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+    .screen { border-radius: 12px; aspect-ratio: 4 / 3; padding: 18px; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; position: relative; overflow: hidden; }
+    .screen::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.55), transparent 60%); }
+    .screen > * { position: relative; z-index: 1; color: #fff; }
+    .s1 { background: linear-gradient(135deg, #1e293b, #b45309); }
+    .s2 { background: linear-gradient(135deg, #0f766e, #a7f3d0 140%); }
+    .s3 { background: linear-gradient(135deg, #3f1d0b, #d97706); }
+    .screen h4 { font-size: 1.05rem; font-weight: 700; }
+    .screen p { font-size: 0.74rem; opacity: 0.85; }
+    .screen .pill { align-self: flex-start; font-size: 0.7rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.92); color: #111; }
+    .mock figcaption { margin-top: 12px; font-size: 0.82rem; color: var(--text-faint); }
+
+    /* ── Section heads ── */
+    .eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); font-weight: 700; margin-bottom: 14px; }
+    .head { max-width: 640px; margin-bottom: 52px; }
+    .head p { color: var(--text-dim); margin-top: 14px; }
+
+    /* ── Cards ── */
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; backdrop-filter: blur(14px); transition: transform .3s, border-color .3s; }
+    .card:hover { transform: translateY(-5px); border-color: rgba(99, 102, 241, 0.5); }
+    .card .num { width: 42px; height: 42px; border-radius: 12px; background: var(--grad); display: grid; place-items: center; font-weight: 800; color: #fff; margin-bottom: 18px; }
+    .card h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .card p { color: var(--text-dim); font-size: 0.95rem; }
+
+    /* ── Pricing ── */
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+    .plan { background: var(--glass); border: 1px solid var(--line); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; backdrop-filter: blur(14px); position: relative; }
+    .plan.hot { border-color: transparent; background: linear-gradient(var(--bg-2), var(--bg-2)) padding-box, var(--grad) border-box; border: 1.5px solid transparent; box-shadow: 0 24px 70px rgba(99, 102, 241, 0.25); }
+    .tag { position: absolute; top: -13px; left: 30px; background: var(--grad); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; }
+    .plan h3 { font-size: 1.15rem; }
+    .plan .for { color: var(--text-faint); font-size: 0.86rem; margin: 4px 0 20px; }
+    .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .price small { font-size: 0.95rem; font-weight: 600; color: var(--text-dim); }
+    .plan ul { list-style: none; margin: 26px 0 30px; display: grid; gap: 12px; flex: 1; }
+    .plan li { font-size: 0.93rem; color: var(--text-dim); padding-left: 26px; position: relative; }
+    .plan li::before { content: "✓"; position: absolute; left: 0; color: #34d399; font-weight: 800; }
+    .plan .btn { width: 100%; }
+    .terms { margin-top: 30px; text-align: center; color: var(--text-faint); font-size: 0.88rem; }
+    .terms b { color: var(--text-dim); }
+
+    /* ── Steps ── */
+    .rail { display: grid; gap: 16px; max-width: 760px; }
+    .step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 24px; background: var(--glass); border: 1px solid var(--line); border-radius: var(--radius); backdrop-filter: blur(14px); }
+    .step .n { width: 56px; height: 56px; border-radius: 16px; background: var(--grad); display: grid; place-items: center; font-weight: 800; font-size: 1.2rem; color: #fff; }
+    .step h3 { font-size: 1.05rem; margin-bottom: 4px; }
+    .step p { color: var(--text-dim); font-size: 0.94rem; }
+
+    /* ── FAQ ── */
+    .faq { max-width: 760px; display: grid; gap: 12px; }
+    details { background: var(--glass); border: 1px solid var(--line); border-radius: 16px; padding: 4px 22px; backdrop-filter: blur(14px); }
+    summary { cursor: pointer; padding: 18px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--indigo); font-size: 1.4rem; line-height: 1; transition: transform .2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { color: var(--text-dim); padding: 0 0 20px; font-size: 0.95rem; }
+
+    /* ── Final CTA ── */
+    .final { text-align: center; }
+    .final-box { background: var(--glass); border: 1px solid var(--line); border-radius: 32px; padding: 72px 28px; backdrop-filter: blur(18px); position: relative; overflow: hidden; }
+    .final-box::before { content: ""; position: absolute; width: 480px; height: 480px; border-radius: 50%; background: var(--grad); filter: blur(120px); opacity: 0.22; top: -240px; left: 50%; transform: translateX(-50%); }
+    .final-box > * { position: relative; }
+    .final-box p { color: var(--text-dim); max-width: 520px; margin: 16px auto 32px; }
+
+    footer { padding: 36px 0 52px; border-top: 1px solid var(--line); color: var(--text-faint); font-size: 0.86rem; text-align: center; }
+
+    /* ── Motion ── */
+    .fade { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .fade.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .orb, .mock:nth-child(2) { animation: none; }
+      .fade { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 880px) {
+      section { padding: 68px 0; }
+      .grid3, .price-grid, .mocks { grid-template-columns: 1fr; }
+      .nav-links a:not(.btn) { display: none; }
+      .hero { padding-top: 56px; }
+      .step { grid-template-columns: 44px 1fr; gap: 14px; padding: 18px; }
+      .step .n { width: 44px; height: 44px; font-size: 1rem; border-radius: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><span class="orb a"></span><span class="orb b"></span><span class="orb c"></span></div>
+
+  <nav>
+    <div class="wrap nav-in">
+      <a href="#top" class="brand"><i></i> Website 48 Giờ</a>
+      <div class="nav-links">
+        <a href="#cach-lam">Cách làm</a>
+        <a href="#bang-gia">Bảng giá</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+        <a href="#" class="btn btn-primary btn-sm" data-zalo>Nhắn Zalo</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="badge fade"><b></b> Đang nhận làm trong tháng 10</span>
+        <h1 class="fade">Khách tìm tiệm của bạn trên Google.<br /><span class="grad-text">Họ thấy gì?</span></h1>
+        <p class="lead fade">Mình dựng website cho tiệm tóc, spa, quán cà phê, phòng tập trong 48 giờ. Bạn xem bản dựng thử trước. Ưng mới cọc.</p>
+        <div class="cta-row fade">
+          <a href="#" class="btn btn-primary" data-zalo>Nhận bản dựng thử miễn phí →</a>
+          <a href="#bang-gia" class="btn btn-ghost">Xem bảng giá</a>
+        </div>
+        <div class="proof fade">
+          <span class="chip"><strong>48 giờ</strong> từ lúc chốt đến lúc chạy</span>
+          <span class="chip"><strong>Xem trước</strong> rồi mới cọc</span>
+          <span class="chip"><strong>Điện thoại</strong> mở lên là mượt</span>
+        </div>
+
+        <div class="mocks">
+          <figure class="mock fade">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="screen s1"><span class="pill">Đặt lịch ngay</span><h4>Barbershop</h4><p>Dịch vụ · Bảng giá · Thợ · Bản đồ</p></div>
+            <figcaption>Mẫu giao diện · Barbershop</figcaption>
+          </figure>
+          <figure class="mock fade">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="screen s2"><span class="pill">Đặt hẹn</span><h4>Spa & Nail</h4><p>Liệu trình · Hình ảnh · Đánh giá</p></div>
+            <figcaption>Mẫu giao diện · Spa & Nail</figcaption>
+          </figure>
+          <figure class="mock fade">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="screen s3"><span class="pill">Xem menu</span><h4>Quán cà phê</h4><p>Menu · Không gian · Giờ mở cửa</p></div>
+            <figcaption>Mẫu giao diện · Quán cà phê</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section>
+      <div class="wrap">
+        <div class="head fade">
+          <div class="eyebrow">Vì sao cần</div>
+          <h2>Fanpage đẹp vẫn chưa đủ.</h2>
+          <p>Người lạ không tìm tiệm trên Facebook. Họ gõ Google. Một trang web đúng chuẩn trả lời họ trong 5 giây: tiệm ở đâu, giá bao nhiêu, đặt lịch thế nào.</p>
+        </div>
+        <div class="grid3">
+          <div class="card fade"><div class="num">1</div><h3>Hiện trên Google Maps</h3><p>Có địa chỉ, giờ mở cửa, nút gọi và chỉ đường. Khách bấm một chạm là tới.</p></div>
+          <div class="card fade"><div class="num">2</div><h3>Bảng giá rõ ràng</h3><p>Khách thấy giá trước khi nhắn. Bớt hỏi đi hỏi lại, người nhắn là người muốn đặt.</p></div>
+          <div class="card fade"><div class="num">3</div><h3>Đặt lịch không cần chờ</h3><p>Form đặt lịch gửi thẳng về Zalo của bạn. Ngoài giờ làm vẫn nhận được khách.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="cach-lam">
+      <div class="wrap">
+        <div class="head fade">
+          <div class="eyebrow">Cách làm</div>
+          <h2>Bạn không mất gì <span class="grad-text">trước khi ưng.</span></h2>
+        </div>
+        <div class="rail">
+          <div class="step fade"><div class="n">1</div><div><h3>Gửi tên tiệm qua Zalo</h3><p>Chỉ cần tên tiệm, link fanpage hoặc Google Maps. Mình tự lấy thông tin và hình ảnh công khai.</p></div></div>
+          <div class="step fade"><div class="n">2</div><div><h3>Xem bản dựng thử, miễn phí</h3><p>Mình dựng một bản xem trước mang đúng tên và phong cách tiệm bạn. Xem trên điện thoại, góp ý thoải mái.</p></div></div>
+          <div class="step fade"><div class="n">3</div><div><h3>Ưng thì cọc 50%</h3><p>Chốt gói, cọc một nửa. Mình hoàn thiện và đưa lên mạng trong 48 giờ.</p></div></div>
+          <div class="step fade"><div class="n">4</div><div><h3>Nhận bàn giao, trả phần còn lại</h3><p>Bạn kiểm tra, sửa nhỏ nếu cần. Ổn rồi mới thanh toán nốt 50%.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="bang-gia">
+      <div class="wrap">
+        <div class="head fade">
+          <div class="eyebrow">Bảng giá</div>
+          <h2>Một lần trả. Không thuê bao ẩn.</h2>
+          <p>Giá một lần cho việc xây dựng. Tên miền và hosting tính riêng theo giá nhà cung cấp, mình báo trước khi bạn quyết.</p>
+        </div>
+        <div class="price-grid">
+          <div class="plan fade">
+            <h3>Khai trương</h3>
+            <div class="for">Tiệm cần có mặt trên mạng thật nhanh</div>
+            <div class="price">2.900.000<small>đ</small></div>
+            <ul>
+              <li>Landing page 1 trang</li>
+              <li>Giới thiệu, dịch vụ, bảng giá</li>
+              <li>Nút gọi và Zalo một chạm</li>
+              <li>Google Maps nhúng sẵn</li>
+              <li>Tối ưu cho điện thoại</li>
+            </ul>
+            <a href="#" class="btn btn-ghost" data-zalo>Chọn gói này</a>
+          </div>
+          <div class="plan hot fade">
+            <span class="tag">Được chọn nhiều nhất</span>
+            <h3>Chốt khách</h3>
+            <div class="for">Tiệm muốn khách tự đặt lịch</div>
+            <div class="price">5.900.000<small>đ</small></div>
+            <ul>
+              <li>Website 5 mục: Trang chủ, Dịch vụ, Bảng giá, Hình ảnh, Liên hệ</li>
+              <li>Form đặt lịch gửi về Zalo/email của bạn</li>
+              <li>Thư viện ảnh và đánh giá khách</li>
+              <li>Chuẩn SEO cơ bản để lên Google</li>
+              <li>1 lần chỉnh sửa miễn phí sau bàn giao</li>
+            </ul>
+            <a href="#" class="btn btn-primary" data-zalo>Chọn gói này</a>
+          </div>
+          <div class="plan fade">
+            <h3>Trọn hệ thống</h3>
+            <div class="for">Tiệm muốn có cả nội dung để đăng</div>
+            <div class="price">9.900.000<small>đ</small></div>
+            <ul>
+              <li>Mọi thứ của gói Chốt khách</li>
+              <li>30 bài đăng fanpage viết sẵn, đúng giọng tiệm</li>
+              <li>Bộ ảnh bìa và ảnh đại diện</li>
+              <li>Hướng dẫn tự cập nhật giá, ảnh</li>
+              <li>Hỗ trợ 30 ngày sau bàn giao</li>
+            </ul>
+            <a href="#" class="btn btn-ghost" data-zalo>Chọn gói này</a>
+          </div>
+        </div>
+        <p class="terms fade"><b>Cọc 50%</b> khi chốt gói, <b>50% còn lại</b> khi bạn nhận bàn giao và ưng ý.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="hoi-dap">
+      <div class="wrap">
+        <div class="head fade"><div class="eyebrow">Hỏi đáp</div><h2>Mấy câu bạn sắp hỏi.</h2></div>
+        <div class="faq">
+          <details class="fade"><summary>Bản dựng thử có thật sự miễn phí không?</summary><p>Có. Mình dựng trước để bạn thấy tiệm mình trông thế nào. Không ưng thì thôi, bạn không mất gì.</p></details>
+          <details class="fade"><summary>Mình không rành công nghệ, có tự quản lý được không?</summary><p>Được. Mình hướng dẫn bạn đổi giá, đổi ảnh bằng các bước đơn giản. Kẹt chỗ nào nhắn Zalo là xong.</p></details>
+          <details class="fade"><summary>Tên miền và hosting thì sao?</summary><p>Tên miền (kiểu tentiem.com) thường tính theo năm và tùy nhà cung cấp. Mình báo giá cụ thể trước khi bạn chốt, tên miền đứng tên bạn.</p></details>
+          <details class="fade"><summary>48 giờ có kịp không?</summary><p>Kịp, vì mình làm bằng AI và quy trình có sẵn. Thời gian tính từ lúc bạn gửi đủ ảnh và thông tin sau khi chốt gói.</p></details>
+          <details class="fade"><summary>Sao không tự làm bằng mẫu có sẵn?</summary><p>Được, nếu bạn có thời gian. Phần lớn chủ tiệm không có. Mình làm để bạn tập trung vào khách.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="wrap">
+        <div class="final-box fade">
+          <h2>Gửi mình tên tiệm.<br /><span class="grad-text">Mình dựng thử cho bạn xem.</span></h2>
+          <p>Một tin nhắn Zalo là đủ. Không form dài, không gọi điện làm phiền.</p>
+          <a href="#" class="btn btn-primary" data-zalo>Nhắn Zalo ngay →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Website 48 Giờ · Làm bởi Quyền Linh · Các hình trong mục mẫu là giao diện minh họa</div>
+  </footer>
+
+  <script>
+    // Chỉnh số Zalo tại đây. Dùng đúng số đã đăng ký Zalo; trang chỉ giữ lại chữ số.
+    const ZALO_PHONE = '0936007937';
+
+    const zaloUrl = 'https://zalo.me/' + ZALO_PHONE.replace(/\D/g, '');
+    document.querySelectorAll('[data-zalo]').forEach(function (a) {
+      a.href = zaloUrl;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+
+    const items = document.querySelectorAll('.fade');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add('in'); });
+    }
+  </script>
+</body>
+</html>
