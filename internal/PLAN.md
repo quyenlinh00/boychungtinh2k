@@ -1,95 +1,105 @@
-# 1.000$ trong tháng 10 — Kế hoạch có số
+# 1.000$ trong tháng 10 — Kế hoạch cho Linh
 
-> Tài liệu nội bộ. Repo này đang để **public** — trước khi merge, chuyển thư mục `internal/` sang repo private.
+> Tài liệu nội bộ, đừng đăng công khai (có phân tích về offer và dữ liệu khách).
 
-## 1. Nói thật trước
+## 1. Ai làm gì
 
-- Không ai hứa chắc được 1.000$, kể cả mình. Mình không tự nhận tiền được. Mình dựng máy bán hàng, bạn là người nhắn tin và chốt.
-- Mục tiêu đổi ra tiền Việt: **~26,5 triệu đ** (tỷ giá quanh 26.100–26.500 đ/USD trong các nguồn mình tìm được, chưa có số đúng ngày hôm nay — bạn kiểm lại ở Vietcombank trước khi chốt).
-- Còn **24 ngày** (7/10 → 31/10). Tiền phải **vào tài khoản** trước 31/10, không phải "đã chốt".
+**Mình (Claude) làm:**
+- Dựng website cho từng doanh nghiệp: nhận thông tin → ra web hoàn chỉnh trong vài phút (xưởng làm web, thư mục `factory/`).
+- Viết tin nhắn chào khách, chụp ảnh bản dựng thử để bạn gửi.
+- Viết nội dung (bài fanpage, mô tả dịch vụ) cho gói cao.
+- Giữ bảng theo dõi, nhắc bạn điểm kiểm tra.
 
-## 2. Vì sao không phải thử thách 21 ngày (ở dạng hiện tại)
+**Bạn làm** (mình không làm thay được):
+- Tìm tiệm trên Google Maps, dán thông tin cho mình.
+- **Gửi** tin nhắn (Zalo/Messenger). Mình không vào được tài khoản của bạn, và tin phải đi từ người thật.
+- Trả lời khách, chốt giá, **nhận tiền**.
+- Đưa web lên mạng (kéo-thả, xem `factory/HUONG-DAN.md`, mất 5 phút).
 
-Trang thử thách đang bán: 20 suất × cọc 300k, **hoàn 100% nếu làm đủ**.
-- Tối đa thu: 20 × 300k = **6 triệu đ (~226$)**, và nếu mọi người làm đủ thì doanh thu thật gần như **bằng 0**.
-- Để chạm 26,5 triệu bằng gói 199k cần ~133 người, bằng gói 399k cần ~67 người. Trang cũng ghi bắt đầu 15/4/2026 — đã cũ 6 tháng.
-- Kết luận: cấu trúc đó đo cam kết, không phải kiếm tiền. Nó vẫn là sản phẩm tốt, chỉ là không phải đường ngắn nhất tới 1.000$ trong 24 ngày. Xem mục 8 nếu muốn sửa giá.
+**Giới hạn thật:** mình chỉ làm việc khi bạn mở cuộc trò chuyện với mình. Lời hứa "bản xem thử trong 24 giờ" chỉ giữ được nếu bạn gửi thông tin cho mình trong ngày. Không gửi kịp thì đừng hứa 24 giờ với khách.
 
-## 3. Đường chính: "Website 48 Giờ" cho tiệm nhỏ
+## 2. Con số mục tiêu
 
-Lý do chọn: bạn đã có sẵn nguyên liệu (bản demo Phố Cổ Barbershop, quy trình Claude + Antigravity), bán cho doanh nghiệp thật nên giá cao hơn bán cho cá nhân, và **ít khách cũng đủ**.
+- 1.000$ ≈ **26,5 triệu đ** (tỷ giá quanh 26.100–26.500, theo các nguồn tháng 7–8/2026. Bạn kiểm lại ở ngân hàng).
+- Còn 24 ngày (7/10 → 31/10). Tiền phải **vào tài khoản** trước 31/10.
 
-Trang bán hàng: `index.html` ở thư mục gốc (đã dựng, 3 gói).
+## 3. Bảng giá mới (bạn đã bảo làm lại)
 
-| Gói | Giá đề xuất | Ghi chú |
+| Gói | Giá | Dành cho |
 |---|---|---|
-| Khai trương | 2.900.000đ | Landing 1 trang |
-| Chốt khách | 5.900.000đ | 5 mục + form đặt lịch |
-| Trọn hệ thống | 9.900.000đ | + 30 bài fanpage + hỗ trợ 30 ngày |
+| Khởi động | 1.990.000đ | 1 trang, cần có mặt trên mạng thật nhanh |
+| Doanh nghiệp | 4.490.000đ | Nhiều phần + form đặt lịch + SEO cơ bản |
+| Tăng trưởng | 7.990.000đ | + 20 bài fanpage + ảnh bìa + hỗ trợ 30 ngày |
+| Chăm sóc (tùy chọn) | 490.000đ/tháng | Cập nhật giá, ảnh, giờ mở cửa |
 
-**Giá này là giá đề xuất để test, mình chưa kiểm chứng được mặt bằng giá ở khu vực của bạn** (trang tham khảo giá bị chặn mạng khi mình tra). Cách kiểm chứng rẻ nhất: gửi 10 tin đầu, nghe phản ứng về giá, chỉnh trước khi gửi đợt lớn.
+**Vì sao hạ giá so với bản trước (2,9 / 5,9 / 9,9 triệu):** bạn chưa có khách cũ để làm bằng chứng. Người lạ nhận tin từ người lạ sẽ ngại trả nhiều. Giá thấp hơn dễ nói "ừ" hơn, đổi lại cần nhiều khách hơn.
+
+**Mình chưa kiểm chứng được mặt bằng giá ở Hà Nội** (tra trên mạng không ra số liệu địa phương). Cách thử rẻ nhất: gửi 10 tin đầu, nghe phản ứng về giá. Nếu 10 người đều thấy "rẻ quá" thì tăng, nếu đều "đắt quá" thì giảm gói Khởi động.
 
 ### Cần bao nhiêu khách?
 
-| Kịch bản | Cơ cấu | Tổng | ≈ USD |
+| Kịch bản | Cơ cấu | Số khách | Tổng |
 |---|---|---|---|
-| A | 3 × Trọn hệ thống | 29,7 tr | 1.121$ |
-| B | 2 × Trọn hệ thống + 1 × Chốt khách + 1 × Khai trương | 28,6 tr | 1.079$ |
-| C | 5 × Chốt khách | 29,5 tr | 1.113$ |
-| D | 10 × Khai trương | 29,0 tr | 1.094$ |
+| A | 6 × Doanh nghiệp | 6 | 26,9 tr (~1.017$) |
+| B | 2 × Tăng trưởng + 2 × Doanh nghiệp + 2 × Khởi động | 6 | 28,9 tr (~1.092$) |
+| C | 5 × Doanh nghiệp + 3 × Khởi động | 8 | 28,4 tr (~1.072$) |
+| D | 14 × Khởi động | 14 | 27,9 tr (~1.051$) |
+| E | 3 × Tăng trưởng + 1 × Doanh nghiệp + 1 × Khởi động | 5 | 30,5 tr (~1.149$) |
 
-Mốc thực tế nên nhắm: **4–5 khách**, mix gói giữa. Cộng thêm chăm sóc 490k/tháng (tùy chọn) làm đệm.
+**Nhắm vào 5–7 khách.** Bán gói cao cho ngành chi tiêu được (nha khoa, thẩm mỹ viện, trung tâm tiếng Anh, nội thất); bán gói Khởi động cho tiệm nhỏ.
 
-### Phễu — đây là GIẢ ĐỊNH, không phải số đã đo
+### Phễu — đây là GIẢ ĐỊNH, chưa đo
 
-100 tin cá nhân hóa → ~15 phản hồi → ~8 xem demo → 3–4 chốt.
-Nếu phễu tệ gấp đôi, bạn cần ~200 tin. Vì vậy có điểm kiểm tra ở mục 5: sai thì sửa sớm, đừng chờ hết tháng.
+170 tin cá nhân hóa → ~25 người trả lời → ~14 xem bản dựng thử → ~6 chốt.
+Nếu phễu tệ gấp đôi, cần ~340 tin. Vì vậy có điểm kiểm tra (mục 5): sai thì sửa sớm.
 
-## 4. Quy trình dựng demo 30 phút (phần của Claude)
+## 4. Tìm khách ở Hà Nội (bạn làm, ~20 phút/ngày)
 
-Với mỗi tiệm bạn chọn, đưa cho Claude: tên tiệm, loại hình, địa chỉ, link fanpage/Maps, 3–5 ảnh công khai, bảng giá nếu có. Claude dựng bản xem trước đúng tên và màu tiệm, bạn gửi link/ảnh chụp màn hình trong tin nhắn. Chỉ dựng cho tiệm đã có dấu hiệu quan tâm hoặc đã trả lời tin đầu — đừng dựng 100 demo cho 100 người chưa hề trả lời.
+1. Mở Google Maps, gõ: `[loại hình] [quận]`, ví dụ `nha khoa Cầu Giấy`, `tiệm tóc nam Đống Đa`, `trung tâm tiếng Anh Thanh Xuân`.
+2. Chọn tiệm **chưa có nút "Trang web"** trên Maps, có từ ~20 đánh giá trở lên (đang hoạt động thật), còn mở cửa.
+3. Ưu tiên gói cao: nha khoa, thẩm mỹ viện/spa lớn, trung tâm đào tạo, nội thất. Gói thấp: tiệm tóc, nail, quán nhỏ.
+4. Quận gợi ý: Cầu Giấy, Đống Đa, Thanh Xuân, Hai Bà Trưng, Hoàn Kiếm, Nam Từ Liêm, Tây Hồ, Long Biên, Hà Đông.
+5. Với mỗi tiệm, dán cho mình: tên, loại hình, địa chỉ, số điện thoại, link Maps/fanpage, và 1 điều bạn thấy hay ở tiệm (để tin nhắn không bị chung chung).
+
+Mình dựng bản xem thử, chụp ảnh, viết sẵn tin nhắn. Bạn chỉ gửi.
 
 ## 5. Lịch 24 ngày
 
 | Ngày | Việc | Mốc đo |
 |---|---|---|
-| **T4 7/10 – T5 8/10** | Chốt giá và điều khoản (mục 6). Bật GitHub Pages cho `index.html`. Lấy mã QR nhận tiền. Lập danh sách **60 tiệm** (tiệm tóc, barber, spa, nail, cà phê, gym gần bạn; ưu tiên chưa có web, fanpage có người đăng đều) vào `leads-tracker.csv`. | Có 60 dòng + link trang chạy |
-| **T6 9/10 – T2 12/10** | **Đợt 1:** 40 tin cá nhân hóa (kịch bản 1). Mỗi ngày ~10 tin. Trả lời nhanh trong ngày. | ≥ 4 phản hồi |
-| **T3 13/10** | **Điểm kiểm tra #1.** Dưới 3 phản hồi / 40 tin → đổi câu mở (nhắn kèm ảnh chụp demo thay vì chữ) hoặc đổi loại hình. Đừng gửi thêm đợt khi chưa sửa. | Quyết định sửa gì |
-| **13/10 – 19/10** | **Đợt 2:** thêm 60 tin + follow-up (kịch bản 2). Dựng demo cho ai đã trả lời. Chốt khách đầu, thu cọc 50%, giao. | ≥ 1 khách cọc |
-| **T3 20/10** | **Điểm kiểm tra #2.** Chưa có khách nào cọc → nhắn lại mọi người đã xem demo với ưu đãi có thời hạn thật (kịch bản 4), mở thêm 40 tin. | Còn ~11 ngày |
-| **20/10 – 26/10** | Chốt các khách còn lại. Giao hàng song song. Thu 50% cuối khi bàn giao. | Tổng cọc ≥ 50% mục tiêu |
-| **T4 28/10** | **Hạn cuối nhận cọc mới** (cần 48h giao + thu nốt trước 31/10). | |
-| **29/10 – T7 31/10** | Giao nốt, thu tiền còn lại, xin giới thiệu (kịch bản 6). | ≥ 26,5 tr đã nhận |
+| **T4 7/10 – T5 8/10** | Chốt giá mới, kiểm tra trang `index.html`. Đưa trang bán hàng lên mạng. Chuẩn bị QR nhận tiền. Tìm 40 tiệm đầu. | Có 40 tiệm + trang chạy |
+| **T6 9/10 – T2 12/10** | **Đợt 1:** gửi ~40 tin kèm ảnh bản dựng thử (~10 tin/ngày). Trả lời trong ngày. | ≥ 5 người trả lời |
+| **T3 13/10** | **Điểm kiểm tra #1.** Dưới 4 người trả lời / 40 tin → đổi câu mở hoặc loại hình. Chưa sửa thì đừng gửi thêm. | Quyết định sửa gì |
+| **13/10 – 19/10** | **Đợt 2:** ~70 tin + nhắn nhắc. Khách đầu tiên: cọc 50%, mình làm, bạn đưa lên mạng. | ≥ 1 khách cọc |
+| **T3 20/10** | **Điểm kiểm tra #2.** Chưa có ai cọc → nhắn lại người đã xem demo (kịch bản 4), mở thêm đợt tìm khách. | Còn 11 ngày |
+| **20/10 – 25/10** | **Đợt 3:** ~60 tin. Chốt, làm, giao song song. | Cọc ≥ 50% mục tiêu |
+| **T4 28/10** | **Hạn cuối nhận cọc mới** (cần 3 ngày làm + thu nốt trước 31/10). | |
+| **29/10 – T7 31/10** | Giao nốt, thu 50% còn lại, xin giới thiệu. | ≥ 26,5 tr đã nhận |
 
-## 6. Điều khoản đề xuất (bạn sửa theo ý)
+## 6. Điều khoản đề xuất
 
-- Xem bản dựng thử miễn phí. Chốt gói thì **cọc 50%**, nhận bàn giao rồi trả **50% còn lại**.
-- Tên miền/hosting tính riêng theo giá nhà cung cấp, đứng tên khách. Báo giá trước khi chốt.
-- Chỉnh sửa: 1 lần miễn phí sau bàn giao (gói Chốt khách), hỗ trợ 30 ngày (gói Trọn hệ thống).
-- Ảnh/thông tin dùng là ảnh khách cung cấp hoặc công khai của tiệm. Khách xác nhận trước khi đưa lên mạng.
-- Trang bán hàng đang hứa: giao 48 giờ, 30 bài fanpage, hỗ trợ 30 ngày. **Chỉ giữ những gì bạn chắc làm được** — sửa trong `index.html` nếu thay đổi.
+- Xem bản dựng thử miễn phí. Chốt gói thì **cọc 50%**, nhận bàn giao và ưng rồi trả **50% còn lại**.
+- Giao: bản xem thử trong 24 giờ; đưa lên mạng trong 3 ngày kể từ khi có đủ ảnh và thông tin từ khách.
+- Chi phí tên miền (nếu khách muốn) tính riêng, báo trước, đứng tên khách.
+- 1 lần chỉnh sửa miễn phí sau bàn giao (gói Doanh nghiệp). Gói Tăng trưởng: hỗ trợ 30 ngày.
+- Chỉ dùng ảnh/thông tin khách cung cấp hoặc đã công khai của tiệm. Khách xác nhận trước khi đưa lên mạng.
+- **Không cam kết thứ hạng Google.** Chỉ cam kết web đúng chuẩn kỹ thuật.
 
 ## 7. Việc hằng ngày của bạn (~60–90 phút)
 
-1. Gửi 10 tin cá nhân hóa (mỗi tin 3–4 phút: xem fanpage tiệm, chọn 1 chi tiết thật để nhắc).
-2. Trả lời mọi phản hồi trong ngày.
-3. Follow-up ai đã im 2 ngày.
-4. Cập nhật `leads-tracker.csv` 5 phút cuối ngày.
+1. 20 phút: tìm ~10 tiệm trên Maps, dán thông tin cho mình.
+2. Nhận ảnh demo + tin nhắn từ mình, sửa 1 câu cho giống giọng bạn, gửi.
+3. Trả lời mọi phản hồi trong ngày. Nhắn nhắc ai im 2 ngày.
+4. 5 phút cuối ngày: cập nhật `leads-tracker.csv` (hoặc đọc cho mình, mình ghi).
 
-Quy tắc gửi: nhắn từ tài khoản thật của bạn, từng tin viết riêng, không gửi hàng loạt giống hệt. Người ta từ chối thì cảm ơn và dừng. Làm vậy vừa đúng, vừa không bị khóa tài khoản.
+Quy tắc gửi: từ tài khoản thật của bạn, từng tin viết riêng, không gửi hàng loạt giống hệt. Người ta từ chối thì cảm ơn và dừng. Vừa đúng, vừa không bị khóa tài khoản.
 
-## 8. Đường phụ: sửa thử thách 21 ngày để bán được tiền
+## 8. Đường phụ (để sau): sửa thử thách 21 ngày
 
-Không bắt buộc, quyết định của bạn. Nếu muốn thử song song:
-- Đổi từ "cọc hoàn 100%" sang **học phí thật**, ví dụ 1.490.000đ, làm đủ 21 ngày thì **hoàn một phần** (ví dụ 30%). Vẫn giữ tinh thần "thắng lại tiền của bạn".
-- 18 người × 1,49 tr ≈ 26,8 tr (~1.011$). Nhưng điều này cần **tệp người theo dõi** đã có sẵn, mà mình không thấy số liệu nào về nó trong repo. Chưa có tệp thì đường này không kịp trong 24 ngày.
-- Làm sau, đừng làm cùng lúc: chia sức sẽ làm cả hai chậm.
+Trang thử thách đang bán 20 suất × cọc 300k **hoàn 100%** → tối đa thu ~6 triệu (~226$) và gần như bằng 0 nếu mọi người làm đủ. Nó đo cam kết, không tạo doanh thu. Muốn kiếm tiền từ nó phải đổi sang học phí thật và cần tệp người theo dõi sẵn có (mình không thấy số liệu nào). Không kịp trong 24 ngày. Làm sau khi có khách web đầu tiên, và khách web đầu tiên chính là câu chuyện để bán thử thách.
 
-## 9. Mình cần bạn quyết / cung cấp
+## 9. Mình cần bạn
 
-1. Giá 3 gói có ổn không, có muốn bỏ gói nào.
-2. Số Zalo trên trang: đang dùng 0936007937 lấy từ trang thử thách của bạn. Đúng số chưa?
-3. Khu vực bạn nhắm (quận/thành phố) và 60 tiệm đầu tiên.
-4. Bạn chắc làm được "48 giờ"? Nếu 72 giờ thì mình sửa trang.
-5. Cách nhận tiền (QR ngân hàng/Momo) và có cần hóa đơn không.
+1. Số Zalo 0936007937: bạn xác nhận đúng rồi.
+2. Cách nhận tiền: QR ngân hàng/Momo (bạn lo).
+3. Bắt đầu từ hôm nay: dán cho mình **5 tiệm đầu tiên** theo mục 4.

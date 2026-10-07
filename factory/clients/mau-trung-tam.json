@@ -1,0 +1,49 @@
+{
+  "slug": "mau-trung-tam",
+  "type": "edu",
+  "category": "Anh ngữ",
+  "ribbon": "Bản demo mẫu · thông tin minh họa, không phải doanh nghiệp thật",
+  "credit": true,
+  "name": "Anh Ngữ Mẫu",
+  "area": "Thanh Xuân",
+  "tagline": "Học tiếng Anh theo mục tiêu của bạn, lớp nhỏ, lộ trình rõ.",
+  "about_short": "Trung tâm lớp nhỏ tại Thanh Xuân. Kiểm tra đầu vào miễn phí để xếp đúng lớp.",
+  "about": "Anh Ngữ Mẫu mở các lớp nhỏ cho học sinh và người đi làm. Học viên được kiểm tra đầu vào để xếp đúng trình độ và nhận lộ trình học theo mục tiêu.",
+  "address": "Số 8 phố Mẫu, Thanh Xuân, Hà Nội",
+  "phone": "0936007937",
+  "zalo": "0936007937",
+  "hours": [
+    "Thứ 2 – Thứ 7: 8:00 – 21:00"
+  ],
+  "highlights": [
+    {
+      "title": "Lớp nhỏ",
+      "text": "Giáo viên theo sát từng học viên."
+    },
+    {
+      "title": "Kiểm tra đầu vào",
+      "text": "Xếp đúng lớp ngay từ buổi đầu."
+    },
+    {
+      "title": "Lộ trình rõ ràng",
+      "text": "Biết mình học gì, tới mốc nào."
+    }
+  ],
+  "services": [
+    {
+      "name": "Giao tiếp cơ bản",
+      "desc": "Cho người đi làm bận rộn, học tối",
+      "price": "2.400.000đ / khóa"
+    },
+    {
+      "name": "Luyện thi IELTS",
+      "desc": "Theo mục tiêu điểm số",
+      "price": "từ 6.500.000đ / khóa"
+    },
+    {
+      "name": "Tiếng Anh thiếu nhi",
+      "desc": "Học qua trò chơi và hoạt động",
+      "price": "1.800.000đ / khóa"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "mau-ca-phe",
+  "type": "fnb",
+  "category": "Cà phê",
+  "ribbon": "Bản demo mẫu · thông tin minh họa, không phải doanh nghiệp thật",
+  "credit": true,
+  "name": "Cà Phê Mẫu",
+  "area": "Hoàn Kiếm",
+  "tagline": "Một góc yên tĩnh giữa phố. Cà phê rang xay, ngồi bao lâu cũng được.",
+  "about_short": "Quán nhỏ gần Hồ Gươm, có chỗ ngồi làm việc và wifi.",
+  "about": "Cà Phê Mẫu là quán nhỏ phục vụ cà phê rang xay, trà và bánh. Không gian yên tĩnh, phù hợp làm việc hoặc gặp bạn bè. Nhận đặt bàn cho nhóm từ 4 người.",
+  "address": "Số 3 phố Mẫu, Hoàn Kiếm, Hà Nội",
+  "phone": "0936007937",
+  "zalo": "0936007937",
+  "hours": [
+    "Hằng ngày: 7:00 – 22:00"
+  ],
+  "highlights": [
+    {
+      "title": "Cà phê rang xay",
+      "text": "Pha tại quầy, đúng vị."
+    },
+    {
+      "title": "Chỗ ngồi làm việc",
+      "text": "Có wifi và ổ cắm."
+    },
+    {
+      "title": "Đặt bàn nhóm",
+      "text": "Nhận đặt trước cho nhóm từ 4 người."
+    }
+  ],
+  "services": [
+    {
+      "name": "Cà phê muối",
+      "desc": "Món được gọi nhiều",
+      "price": "35.000đ"
+    },
+    {
+      "name": "Bạc xỉu",
+      "price": "30.000đ"
+    },
+    {
+      "name": "Cold brew",
+      "desc": "Ủ lạnh 18 giờ",
+      "price": "45.000đ"
+    },
+    {
+      "name": "Trà đào cam sả",
+      "price": "42.000đ"
+    },
+    {
+      "name": "Bánh flan",
+      "price": "25.000đ"
+    }
+  ]
+}
