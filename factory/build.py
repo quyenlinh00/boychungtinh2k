@@ -140,6 +140,7 @@ footer{padding:34px 0 40px;border-top:1px solid var(--line);color:var(--dim);fon
  .grid3,.two,.shots{grid-template-columns:1fr}
  .hero{padding:64px 0 56px}
  .hero.photo{padding:96px 0 72px}
+ .cta-row .btn{width:100%}
  .row{flex-direction:column;gap:6px}
  .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--bar);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
  .dock .btn{padding:13px 10px}
@@ -263,7 +264,7 @@ def build_body(c, p):
     if c.get("ribbon"):
         parts.append(f'<div class="ribbon">{esc(c["ribbon"])}</div>')
 
-    nav = ['<a href="#dich-vu">' + esc(p["services_title"].split(" &")[0]) + "</a>", '<a href="#gioi-thieu">Giới thiệu</a>']
+    nav = ['<a href="#dich-vu">' + esc(c.get("services_title", p["services_title"]).split(" &")[0]) + "</a>", '<a href="#gioi-thieu">Giới thiệu</a>']
     if c.get("faq"):
         nav.append('<a href="#hoi-dap">Hỏi đáp</a>')
     nav.append('<a href="#lien-he">Liên hệ</a>')
@@ -304,12 +305,14 @@ def build_body(c, p):
     rows = "".join(
         f'<div class="row"><div><h3>{esc(s["name"])}</h3>'
         + (f'<p>{esc(s["desc"])}</p>' if s.get("desc") else "")
-        + f'</div><div class="price">{esc(s.get("price", ""))}</div></div>'
+        + "</div>"
+        + (f'<div class="price">{esc(s["price"])}</div>' if s.get("price") else "")
+        + "</div>"
         for s in c["services"]
     )
     parts.append(
         f'<section id="dich-vu"><div class="wrap"><div class="eyebrow">{category}</div>'
-        f'<h2>{esc(p["services_title"])}</h2><div class="svc">{rows}</div></div></section>'
+        f'<h2>{esc(c.get("services_title", p["services_title"]))}</h2><div class="svc">{rows}</div></div></section>'
     )
 
     hours = "".join(f"<dd>{esc(h)}</dd>" for h in c.get("hours", []))

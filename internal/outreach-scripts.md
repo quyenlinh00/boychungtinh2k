@@ -11,6 +11,19 @@ Thay `[…]` bằng chi tiết thật bạn thấy ở fanpage/Maps. Không có 
 > Mình làm website cho tiệm ở Hà Nội. Mình đã dựng thử một bản mang tên [tên tiệm] (ảnh đính kèm) để anh/chị xem, miễn phí, ưng mới tính tiếp.
 > Anh/chị xem qua giúp mình được không ạ?
 
+## 1b. Mở lời khi tiệm ĐÃ có web nhưng cũ (ví dụ phòng khám đông khách)
+
+Đừng chê web hiện tại của họ trong tin nhắn. Khen điều thật (lượng đánh giá), rồi đưa bản dựng thử.
+
+> Chào anh/chị, mình là Linh, làm website cho phòng khám và doanh nghiệp ở Hà Nội.
+> Mình thấy [tên tiệm] có lượng đánh giá rất tốt trên Google Maps ([số thật bạn vừa kiểm tra] lượt). Mình nghĩ một trang web đặt lịch gọn, mở mượt trên điện thoại sẽ giúp khách mới dễ đặt lịch hơn.
+> Mình đã dựng thử một bản mang tên [tên tiệm] (ảnh đính kèm), miễn phí để anh/chị tham khảo. Phần dịch vụ trong ảnh là mẫu, nếu anh/chị ưng mình cập nhật đúng thông tin thật của phòng khám.
+> Anh/chị xem qua giúp mình được không ạ?
+
+Trước khi gửi: tự mở Google Maps xem lại số đánh giá, rồi điền số thật. Không điền số bạn không kiểm tra được.
+
+Khi họ quan tâm, hỏi: *ai đang quản lý tên miền và nơi lưu trữ web hiện tại?* Nếu web cũ đang do một công ty khác giữ thì việc chuyển sang web mới cần phối hợp thêm, báo khách rõ trước khi chốt.
+
 ## 2. Nhắn nhắc lần 1 (sau 2 ngày im)
 
 > Dạ mình nhắn lại một chút thôi ạ. Bản dựng thử cho [tên tiệm] mình vẫn giữ, anh/chị xem qua điện thoại được không ạ? Không ưng thì thôi, không sao ạ.

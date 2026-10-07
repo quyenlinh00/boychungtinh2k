@@ -56,7 +56,7 @@ Nếu phễu tệ gấp đôi, cần ~340 tin. Vì vậy có điểm kiểm tra 
 ## 4. Tìm khách ở Hà Nội (bạn làm, ~20 phút/ngày)
 
 1. Mở Google Maps, gõ: `[loại hình] [quận]`, ví dụ `nha khoa Cầu Giấy`, `tiệm tóc nam Đống Đa`, `trung tâm tiếng Anh Thanh Xuân`.
-2. Chọn tiệm **chưa có nút "Trang web"** trên Maps, có từ ~20 đánh giá trở lên (đang hoạt động thật), còn mở cửa.
+2. Chọn tiệm có từ ~20 đánh giá trở lên (đang hoạt động thật), còn mở cửa, và thuộc một trong hai nhóm: **chưa có web** (không có nút "Trang web" trên Maps), hoặc **có web nhưng cũ/khó xem trên điện thoại** mà đánh giá nhiều (đông khách thật, có lý do để nâng cấp). Nhóm thứ hai dùng kịch bản 1b.
 3. Ưu tiên gói cao: nha khoa, thẩm mỹ viện/spa lớn, trung tâm đào tạo, nội thất. Gói thấp: tiệm tóc, nail, quán nhỏ.
 4. Quận gợi ý: Cầu Giấy, Đống Đa, Thanh Xuân, Hai Bà Trưng, Hoàn Kiếm, Nam Từ Liêm, Tây Hồ, Long Biên, Hà Đông.
 5. Với mỗi tiệm, dán cho mình: tên, loại hình, địa chỉ, số điện thoại, link Maps/fanpage, và 1 điều bạn thấy hay ở tiệm (để tin nhắn không bị chung chung).
