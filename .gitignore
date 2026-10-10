@@ -19,3 +19,7 @@
 # Dữ liệu khách thật: giữ riêng tư, không đưa lên GitHub công khai
 factory/clients/kh-*.json
 factory/out/kh-*/
+
+# Python
+__pycache__/
+*.pyc
