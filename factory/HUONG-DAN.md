@@ -45,9 +45,18 @@ Form đặt lịch trên web chỉ nhận được thông tin khi web nằm trê
 
 Theo mình nhớ, gói miễn phí giới hạn số lượt gửi mỗi tháng (khoảng 100). Bạn kiểm tra lại trước khi hứa với khách. Mình **chưa test được form trên Netlify thật**. Lần đầu có khách, bạn tự điền thử một lần xem email có về không rồi hãy bàn giao.
 
+## C2. Ảnh thật làm web đẹp hơn nhiều
+
+Hình minh họa mình vẽ giúp web có hồn khi chưa có ảnh, nhưng **ảnh thật của chính tiệm** mới là thứ thuyết phục nhất: khách thấy phòng khám của họ trên màn hình điện thoại.
+- Xin chủ tiệm 5–10 ảnh (mặt tiền, phòng khám/không gian, đội ngũ, công việc thực tế), hoặc tải từ fanpage/Google Maps của họ.
+- Gửi ảnh vào cuộc trò chuyện với mình. Mình đặt ảnh chính vào đầu trang, ảnh còn lại thành mục "Không gian thực tế" (đã thử bố cục này, chạy tốt).
+- Nếu máy mình không nhận được file ảnh gốc, mình sẽ báo ngay để tìm cách khác. Mình chưa thử việc này với ảnh bạn gửi.
+- Chỉ đưa ảnh lên web thật khi chủ tiệm đồng ý. Dùng ảnh công khai của họ trong bản xem thử gửi riêng cho chính họ là bình thường.
+
 ## D. Dành cho kỹ thuật (bạn có thể bỏ qua)
 
 - `build.py` đọc `clients/*.json`, xuất `out/<tên>/index.html`. Chạy `python3 build.py`.
+- Bản 2 có: hình minh họa riêng cho từng loại hình, thẻ nổi, biểu tượng dịch vụ, quy trình, khối đánh giá Google (cần `maps_url`), chỗ cho ảnh thật (`images.hero`, `images.gallery`), khung bản đồ dự phòng.
 - 4 loại hình có sẵn: `salon`, `clinic`, `edu`, `fnb` (bảng màu và tên mục riêng).
 - 4 file `mau-*.json` là bản demo minh họa, dùng thông tin giả. Số điện thoại trong mẫu là số Zalo của bạn.
 - Tên, địa chỉ, giá khách nhập đều được xử lý an toàn trước khi đưa vào web (đã thử với dữ liệu chèn mã).
