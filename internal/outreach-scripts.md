@@ -11,18 +11,17 @@ Thay `[…]` bằng chi tiết thật bạn thấy ở fanpage/Maps. Không có 
 > Mình làm website cho tiệm ở Hà Nội. Mình đã dựng thử một bản mang tên [tên tiệm] (ảnh đính kèm) để anh/chị xem, miễn phí, ưng mới tính tiếp.
 > Anh/chị xem qua giúp mình được không ạ?
 
-## 1b. Mở lời khi tiệm ĐÃ có web nhưng cũ (ví dụ phòng khám đông khách)
+## 1b. Mở lời khi nơi đó ĐÃ có web nhưng cũ (ví dụ phòng khám đông khách)
 
-Đừng chê web hiện tại của họ trong tin nhắn. Khen điều thật (lượng đánh giá), rồi đưa bản dựng thử.
+Bản này đã qua QA ngày 12/10. Đừng nhắc "web cũ" trong tin. Chỉ gửi **ảnh chụp** (ảnh đầu trang có dòng "bản xem thử"), không gửi link trang.
 
-> Chào anh/chị, mình là Linh, làm website cho phòng khám và doanh nghiệp ở Hà Nội.
-> Mình thấy [tên tiệm] có lượng đánh giá rất tốt trên Google Maps ([số thật bạn vừa kiểm tra] lượt). Mình nghĩ một trang web đặt lịch gọn, mở mượt trên điện thoại sẽ giúp khách mới dễ đặt lịch hơn.
-> Mình đã dựng thử một bản mang tên [tên tiệm] (ảnh đính kèm), miễn phí để anh/chị tham khảo. Phần dịch vụ trong ảnh là mẫu, nếu anh/chị ưng mình cập nhật đúng thông tin thật của phòng khám.
-> Anh/chị xem qua giúp mình được không ạ?
+> Chào anh/chị, mình là Quyền Linh, mình nhận dựng website cho phòng khám và doanh nghiệp nhỏ ở Hà Nội.
+> Mình thấy [tên nơi đó] có [số] đánh giá trên Google Maps. Mình đã tự dựng thử một bản website mang tên [tên nơi đó] (ảnh đính kèm): có nút gọi, bản đồ và form gửi yêu cầu đặt lịch, xem gọn trên điện thoại. Bản này mình làm để anh/chị tham khảo, chưa đăng lên mạng. Phần dịch vụ trong ảnh là mẫu, nếu anh/chị quan tâm mình sẽ cập nhật đúng thông tin thật.
+> Nếu chưa phù hợp, anh/chị cứ nhắn một tiếng, mình sẽ không làm phiền thêm ạ.
 
-Trước khi gửi: tự mở Google Maps xem lại số đánh giá, rồi điền số thật. Không điền số bạn không kiểm tra được.
+Trước khi gửi: mở Google Maps xem số đánh giá thật rồi điền vào `[số]`. Không đọc được số thì xóa nguyên câu có `[số]`. Không điền số bạn không kiểm chứng được. Với phòng khám, dùng "phòng khám", "người bệnh" thay cho "tiệm", "khách".
 
-Khi họ quan tâm, hỏi: *ai đang quản lý tên miền và nơi lưu trữ web hiện tại?* Nếu web cũ đang do một công ty khác giữ thì việc chuyển sang web mới cần phối hợp thêm, báo khách rõ trước khi chốt.
+Khi họ quan tâm, hỏi: *ai đang quản lý tên miền và nơi lưu trữ web hiện tại?* Nếu web cũ do công ty khác giữ thì việc chuyển sang web mới cần phối hợp thêm, báo rõ trước khi chốt. Chốt gói phải nói "3 ngày kể từ khi nhận đủ và duyệt xong nội dung".
 
 ## 2. Nhắn nhắc lần 1 (sau 2 ngày im)
 

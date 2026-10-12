@@ -30,6 +30,7 @@ MAKER_ZALO = "0936007937"
 # ---------------------------------------------------------------- loại hình
 PRESETS = {
     "salon": {
+        "steps_title": "Đơn giản từ lần đầu ghé tiệm.",
         "label": "Tiệm tóc & làm đẹp", "services_title": "Dịch vụ & bảng giá", "cta": "Đặt lịch",
         "when": "Ngày giờ muốn đến", "dark": True,
         "bg": "#0b0b10", "bg2": "#12121a", "card": "rgba(255,255,255,0.055)", "text": "#f5f1ea",
@@ -41,6 +42,7 @@ PRESETS = {
                   ("Hoàn thiện", "Xem lại, chỉnh nhẹ cho ưng ý.")],
     },
     "clinic": {
+        "steps_title": "Đơn giản từ lần đầu đến khám.",
         "label": "Phòng khám & nha khoa", "services_title": "Dịch vụ", "cta": "Đặt lịch khám",
         "when": "Ngày giờ muốn khám", "dark": False,
         "bg": "#f6fbfb", "bg2": "#e9f5f5", "card": "#ffffff", "text": "#0b1f2a",
@@ -52,6 +54,7 @@ PRESETS = {
                   ("Điều trị", "Thực hiện theo phương án bạn đã đồng ý.")],
     },
     "edu": {
+        "steps_title": "Rõ ràng từ buổi đầu tiên.",
         "label": "Trung tâm đào tạo", "services_title": "Khóa học & học phí", "cta": "Đăng ký tư vấn",
         "when": "Khóa học quan tâm", "dark": False,
         "bg": "#f8f7ff", "bg2": "#efedfd", "card": "#ffffff", "text": "#14132b",
@@ -63,6 +66,7 @@ PRESETS = {
                   ("Bắt đầu học", "Theo lộ trình đã thống nhất.")],
     },
     "fnb": {
+        "steps_title": "Dễ dàng từ lần đầu ghé quán.",
         "label": "Quán cà phê & nhà hàng", "services_title": "Menu nổi bật", "cta": "Đặt bàn",
         "when": "Ngày giờ & số người", "dark": False,
         "bg": "#fdf8f1", "bg2": "#f6ebdc", "card": "#ffffff", "text": "#2a1d12",
@@ -187,7 +191,7 @@ h3{letter-spacing:-.01em}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:1.06rem;min-width:0;white-space:nowrap}
 .logo span{overflow:hidden;text-overflow:ellipsis}
-.logo i{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--ink);display:grid;place-items:center}
+.logo i{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--ink);display:grid;place-items:center;font-style:normal;font-weight:800}
 .links{display:flex;align-items:center;gap:28px;font-size:.92rem;color:var(--dim)}
 .links a:hover{color:var(--text)}
 
@@ -405,7 +409,7 @@ def pick_icon(service, preset, i):
     if service.get("icon") in ICONS:
         return service["icon"]
     n = service["name"].lower()
-    rules = [("khám", "stethoscope"), ("tư vấn", "stethoscope"), ("cao răng", "sparkle"), ("tẩy", "sparkle"),
+    rules = [("trám", "shield"), ("khám", "stethoscope"), ("tư vấn", "stethoscope"), ("cao răng", "sparkle"), ("tẩy", "sparkle"),
              ("sứ", "crown"), ("niềng", "braces"), ("implant", "implant"), ("trồng", "implant"),
              ("cắt", "scissors"), ("uốn", "sparkle"), ("nhuộm", "sparkle"), ("ielts", "cap"), ("thi", "cap")]
     for key, name in rules:
@@ -468,6 +472,7 @@ def build_body(c, p):
     name = esc(c["name"])
     category = esc(c.get("category", p["label"]))
     cta = esc(c.get("cta", p["cta"]))
+    has_zalo = c.get("zalo", True) is not False
     zalo = "https://zalo.me/" + digits(c.get("zalo") or c["phone"])
     tel = "tel:" + digits(c["phone"])
     addr = c["address"]
@@ -478,7 +483,8 @@ def build_body(c, p):
     images = c.get("images", {})
     hero_img = safe_image(images["hero"]) if images.get("hero") else None
     gallery = [safe_image(g) for g in images.get("gallery", [])]
-    svc_title = esc(c.get("services_title", p["services_title"]))
+    sample_tag = " (mẫu)" if c.get("ribbon") else ""
+    svc_title = esc(c.get("services_title", p["services_title"]) + sample_tag)
     has_reviews = bool(c.get("maps_url") or c.get("testimonials"))
 
     out = []
@@ -491,7 +497,7 @@ def build_body(c, p):
         nav.append('<a href="#danh-gia">Đánh giá</a>')
     nav.append('<a href="#lien-he">Liên hệ</a>')
     out.append(
-        f'<header class="top"><div class="wrap bar"><a class="logo" href="#top"><i>{icon("sparkle", 18)}</i><span>{name}</span></a>'
+        f'<header class="top"><div class="wrap bar"><a class="logo" href="#top"><i>{esc(c["name"].strip()[:1].upper())}</i><span>{name}</span></a>'
         f'<nav class="links">{"".join(nav)}<a class="btn btn-main btn-sm" href="#lien-he">{cta}</a></nav></div></header>')
 
     # ---- hero
@@ -516,7 +522,7 @@ def build_body(c, p):
         f'<a class="btn btn-line" href="{esc(tel)}">{icon("phone", 18)}{esc(c["phone"])}</a></div>'
         + (f'<div class="mini rv d3">{mini}</div>' if mini else "")
         + f'</div><div class="stage rv d2">{visual}'
-        f'<div class="fc a"><span class="t">{icon("calendar", 20)}</span><div><b>Đặt lịch online</b><small>Chọn giờ phù hợp với bạn</small></div></div>'
+        f'<div class="fc a"><span class="t">{icon("calendar", 20)}</span><div><b>Gửi yêu cầu đặt lịch</b><small>Bên mình sẽ liên hệ lại</small></div></div>'
         f'<div class="fc b"><span class="t">{icon("pin", 20)}</span><div><b>{esc(area)}</b><small>{esc(street)}</small></div></div>'
         f'<div class="fc c"><span class="t">{icon("phone", 20)}</span><div><b>{esc(c["phone"])}</b><small>Gọi một chạm</small></div></div>'
         f'</div></div></section>')
@@ -541,7 +547,7 @@ def build_body(c, p):
         for i, (t, tx) in enumerate(steps, 1))
     out.append(
         f'<section id="quy-trinh" class="alt" style="padding-top:0"><div class="wrap"><div class="head rv"><div class="eyebrow">Quy trình</div>'
-        f'<h2>Đơn giản từ lần đầu đến.</h2></div><div class="steps">{st}</div></div></section>')
+        f'<h2>{esc(p["steps_title"])}{sample_tag}</h2></div><div class="steps">{st}</div></div></section>')
 
     # ---- about + info
     hours = "".join(f"<dd>{esc(h)}</dd>" for h in c.get("hours", []))
@@ -571,7 +577,7 @@ def build_body(c, p):
                          for i, t in enumerate(c["testimonials"][:3], 1))
             inner += f'<div class="grid3" style="margin-bottom:24px">{qs}</div>'
         if c.get("maps_url"):
-            inner += (f'<div class="rev rv"><div><div class="eyebrow">Đánh giá thật</div><h2>Khách hàng nói gì về {name}?</h2>'
+            inner += (f'<div class="rev rv"><div><div class="eyebrow">Đánh giá</div><h2>Khách hàng nói gì về {name}?</h2>'
                       f'<p class="dim" style="margin-top:8px">Xem các đánh giá trực tiếp trên Google Maps.</p></div>'
                       f'<a class="btn btn-main" href="{esc(c["maps_url"])}" target="_blank" rel="noopener">Xem đánh giá {icon("arrow", 18)}</a></div>')
         out.append(f'<section id="danh-gia"><div class="wrap">{inner}</div></section>')
@@ -606,14 +612,20 @@ def build_body(c, p):
         f'<div class="mapbox"><div><div class="t">{icon("pin", 24)}</div><b>{esc(area)}</b><small>{esc(addr)}</small></div>'
         f'<iframe src="{esc(maps_embed)}" title="Bản đồ {name}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'
         f'<div class="acts"><a class="btn btn-line" href="{esc(maps_dir)}" target="_blank" rel="noopener">{icon("pin", 18)}Chỉ đường</a>'
-        f'<a class="btn btn-line" href="{esc(zalo)}" target="_blank" rel="noopener">{icon("chat", 18)}Nhắn Zalo</a></div>'
-        '</div></div></section></main>')
+        + (f'<a class="btn btn-line" href="{esc(zalo)}" target="_blank" rel="noopener">{icon("chat", 18)}Nhắn Zalo</a>' if has_zalo else "")
+        + '</div></div></div></section></main>')
 
     credit = f' · Website bởi {esc(MAKER_NAME)} · Zalo {esc(MAKER_ZALO)}' if c.get("credit") else ""
+    if c.get("ribbon"):
+        foot = f'Bản xem thử do {esc(MAKER_NAME)} dựng, chưa phải website chính thức của {name}, chưa được {name} xác nhận · Zalo {esc(MAKER_ZALO)}'
+    else:
+        foot = f'© {datetime.date.today().year} {name} · {esc(addr)}{credit}'
     out.append(
-        f'<footer><div class="wrap">© {datetime.date.today().year} {name} · {esc(addr)}{credit}</div></footer>'
+        f'<footer><div class="wrap">{foot}</div></footer>'
         f'<div class="dock"><a class="btn btn-line" href="{esc(tel)}">{icon("phone", 18)}Gọi ngay</a>'
-        f'<a class="btn btn-main" href="{esc(zalo)}" target="_blank" rel="noopener">{icon("chat", 18)}Nhắn Zalo</a></div>')
+        + (f'<a class="btn btn-main" href="{esc(zalo)}" target="_blank" rel="noopener">{icon("chat", 18)}Nhắn Zalo</a>' if has_zalo
+           else f'<a class="btn btn-main" href="{esc(maps_dir)}" target="_blank" rel="noopener">{icon("pin", 18)}Chỉ đường</a>')
+        + '</div>')
     return "".join(out)
 
 
