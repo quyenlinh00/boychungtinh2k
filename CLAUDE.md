@@ -61,6 +61,7 @@ Lead làm: nhận việc từ Linh, chia việc, chạy các việc độc lập
 - Máy đội **không vào được** Google Maps, maps.app.goo.gl, nhakhoahub.com, sapo.vn, Unsplash, Pexels. WebSearch cho kết quả nghèo về doanh nghiệp địa phương Hà Nội. Scout cần Linh đưa nguồn.
 - Higgsfield: gói miễn phí, 0 credit, không tạo được ảnh/video.
 - `CronCreate` chỉ sống trong một phiên (tối đa 7 ngày). Lịch bền dùng Routine (`create_trigger`) và **chỉ bật khi Linh đồng ý**.
+- **Họp sáng đã được Linh bật ngày 13/10/2026**: Routine "Văn Phòng AI: họp sáng", 7h45 sáng hằng ngày giờ Việt Nam, mỗi lần một phiên mới. Id Routine nằm ở `system/main.standupTriggerId` trong Văn Phòng AI. **Không tạo Routine trùng.** Muốn tắt: `update_trigger` với `enabled=false` và đặt `system/main.standup` = "chua_bat". Nội dung prompt gốc: `ops/routine-prompt.md`. Routine không có kết nối ngoài (không Gmail, Drive...) và không gắn sẵn repo, nên phiên họp tự `git clone` repo công khai để đọc file này.
 - Form đặt lịch trên web chỉ chạy khi web nằm trên Netlify, **chưa test trên Netlify thật**.
 - Ảnh thật của khách: gửi qua chat, chưa thử xem máy đội có lấy được file không.
 
