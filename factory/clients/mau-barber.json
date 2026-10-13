@@ -1,0 +1,68 @@
+{
+  "slug": "mau-barber",
+  "type": "salon",
+  "category": "Barbershop",
+  "ribbon": "Bản demo mẫu · thông tin minh họa, không phải doanh nghiệp thật",
+  "credit": true,
+  "name": "Barber Mẫu",
+  "area": "Cầu Giấy",
+  "tagline": "Cắt gọn, ra dáng. Đặt lịch trước, tới là được cắt.",
+  "about_short": "Tiệm cắt tóc nam cho người bận rộn: nhanh, sạch, đúng kiểu bạn muốn.",
+  "about": "Barber Mẫu là tiệm tóc nam nhỏ ở Cầu Giấy. Thợ trao đổi kỹ kiểu tóc với bạn trước khi cắt, dụng cụ được vệ sinh sau mỗi khách. Đặt lịch qua Zalo hoặc form bên dưới.",
+  "address": "Số 12 ngõ Mẫu, Cầu Giấy, Hà Nội",
+  "phone": "0936007937",
+  "zalo": "0936007937",
+  "hours": [
+    "Thứ 2 – Chủ nhật: 9:00 – 21:00"
+  ],
+  "highlights": [
+    {
+      "title": "Đặt lịch trước",
+      "text": "Chọn giờ qua Zalo hoặc form, không phải ngồi chờ."
+    },
+    {
+      "title": "Tư vấn kiểu tóc",
+      "text": "Thợ hỏi kỹ mong muốn rồi mới cắt."
+    },
+    {
+      "title": "Dụng cụ sạch",
+      "text": "Vệ sinh dụng cụ sau mỗi khách."
+    }
+  ],
+  "services": [
+    {
+      "name": "Cắt tóc nam",
+      "desc": "Cắt, tạo kiểu cơ bản",
+      "price": "80.000đ"
+    },
+    {
+      "name": "Cắt + gội + tạo kiểu",
+      "desc": "Trọn gói, ra về là đi chơi được",
+      "price": "120.000đ"
+    },
+    {
+      "name": "Uốn tóc nam",
+      "desc": "Tùy độ dài và kiểu uốn",
+      "price": "từ 300.000đ"
+    },
+    {
+      "name": "Nhuộm tóc",
+      "desc": "Báo giá theo màu và độ dài",
+      "price": "từ 250.000đ"
+    },
+    {
+      "name": "Cạo mặt + lấy ráy tai",
+      "price": "50.000đ"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Có cần đặt lịch trước không?",
+      "a": "Nên đặt trước để chọn được giờ phù hợp. Khách vãng lai vẫn được phục vụ khi còn chỗ."
+    },
+    {
+      "q": "Bảng giá trên web có đúng không?",
+      "a": "Đây là bản demo mẫu với thông tin minh họa. Trang thật sẽ dùng bảng giá của chính tiệm bạn."
+    }
+  ]
+}
