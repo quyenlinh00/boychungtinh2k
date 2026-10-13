@@ -65,6 +65,13 @@ Lead làm: nhận việc từ Linh, chia việc, chạy các việc độc lập
 - Form đặt lịch trên web chỉ chạy khi web nằm trên Netlify, **chưa test trên Netlify thật**.
 - Ảnh thật của khách: gửi qua chat, chưa thử xem máy đội có lấy được file không.
 
+## 6b. Skill thiết kế: `design-taste-frontend`
+Cài ngày 13/10/2026 từ https://github.com/Leonxlnx/taste-skill (MIT), nằm ở `.claude/skills/design-taste-frontend/`. Dùng khi dựng hoặc nâng cấp giao diện web **cho khách hoặc trang bán hàng** (xưởng `factory/`, `index.html`): nạp bằng tool Skill để lấy hướng thiết kế chống giao diện "AI mặc định" (chữ, bố cục, chuyển động, kiểm tra cuối).
+- Không áp cho trang Văn Phòng AI (là bảng điều hành, skill tự ghi không dành cho dashboard).
+- Skill ngầm hướng React/Tailwind. Xưởng là HTML thuần không npm: lấy hướng thiết kế, **không thêm framework**.
+- Skill bảo hỏi lại một câu khi đề bài mơ hồ. Trong họp sáng tự động thì không hỏi: suy ra rồi làm.
+- Nội dung vẫn tuân luật mục 4 (không bịa, nhãn bản xem thử...). Thiết kế đẹp không được lấn át sự thật.
+
 ## 7. Bài học QA (12/10, gói Minh Châu) — kiểm trước khi đưa Linh
 - Footer "© tên khách" trên bản xem thử = nhận bản quyền thay họ. Cấm.
 - Thẻ/câu hứa "đặt lịch online, chọn giờ" khi chưa biết khách có nhận đặt lịch qua web. Dùng "Gửi yêu cầu đặt lịch".
