@@ -1,0 +1,6 @@
+#!/bin/sh
+# Stub cố ý của đội. KHÔNG cài chương trình `impeccable` gốc: nó tải một tệp chạy được
+# từ internet rồi tự chạy sau mỗi lần sửa file. Xem SOURCE.md cùng thư mục.
+# Skill sẽ đi theo nhánh "Launcher unavailable" của chính nó.
+echo "impeccable: chương trình hỗ trợ không được cài (cố ý, xem .claude/skills/impeccable/SOURCE.md). Đọc PRODUCT.md và DESIGN.md trực tiếp, không bịa phần còn thiếu." >&2
+exit 127

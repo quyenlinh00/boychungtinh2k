@@ -73,6 +73,11 @@ Cài ngày 13/10/2026 từ https://github.com/Leonxlnx/taste-skill (MIT), nằm 
 - Skill bảo hỏi lại một câu khi đề bài mơ hồ. Trong họp sáng tự động thì không hỏi: suy ra rồi làm.
 - Nội dung vẫn tuân luật mục 4 (không bịa, nhãn bản xem thử...). Thiết kế đẹp không được lấn át sự thật.
 
+### Skill `impeccable` và tài liệu tham khảo thiết kế
+- `.claude/skills/impeccable/` (Apache 2.0, từ https://github.com/pbakaus/impeccable, cài 13/10/2026): bộ chỉ dẫn shape, critique, audit, polish, typeset, layout... Dùng để **đánh giá và tinh chỉnh** giao diện đã có; `design-taste-frontend` dùng để dựng mới. Hai skill chồng nhau một phần: chọn một cho mỗi việc, đừng chạy cả hai.
+- **Chỉ cài phần chỉ dẫn.** Cố ý KHÔNG cài chương trình hỗ trợ và hooks của repo nguồn (chương trình tải tệp chạy được từ internet và tự chạy sau mỗi lần sửa file). `scripts/impeccable` ở đây là stub thoát mã 127; skill tự rơi về nhánh dự phòng. Không cài hooks hay chương trình đó khi Linh chưa quyết. Chi tiết: `.claude/skills/impeccable/SOURCE.md`.
+- `design/references/vercel-DESIGN.md` (MIT, từ VoltAgent/awesome-design-md): ví dụ cách mô tả một hệ thống thiết kế. Chỉ để tham khảo, không sao chép thương hiệu cho khách.
+
 ## 7. Bài học QA (12/10, gói Minh Châu) — kiểm trước khi đưa Linh
 - Footer "© tên khách" trên bản xem thử = nhận bản quyền thay họ. Cấm.
 - Thẻ/câu hứa "đặt lịch online, chọn giờ" khi chưa biết khách có nhận đặt lịch qua web. Dùng "Gửi yêu cầu đặt lịch".
