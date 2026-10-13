@@ -18,3 +18,6 @@ Việc cần làm, theo thứ tự:
 8. Chỉ gửi PushNotification khi có việc đáng để Linh mở ra làm hoặc có tin quan trọng, một câu dưới 200 ký tự bằng tiếng Việt. Không có gì mới thì không báo.
 
 Giới hạn cứng: **không gửi tin, email hay đăng bài tới bất kỳ ai**, không tiêu tiền hay credit, không ghi dữ liệu khách thật vào file được commit. Nếu không chắc, tạo việc hỏi Linh thay vì tự quyết.
+
+## Cập nhật 13/10/2026 (sau lần chạy thử)
+Phiên họp tự động không tự nạp Agent riêng và skill. Prompt đang chạy đã sửa: giao việc bằng Agent loại `general-purpose` kèm nội dung file `.claude/agents/<tên>.md`; skill thì đọc thẳng file `SKILL.md`. Điểm kiểm tra 13/10 đã xong nên bỏ khỏi prompt.
